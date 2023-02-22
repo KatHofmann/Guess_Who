@@ -1,15 +1,16 @@
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.ArrayList;
-
-
 public abstract class Interactables {
 
-    String type;
 
-    public Interactables(String type) {
-        this.type = type;
-    }
+    public void isCLicked(){
+        //Mouse Tracker essentially
+    };
+    /*
+    This section would require essentially creating a function to connect the
+    button/portrait objects with a clicker/selection function
+
+
+
+     */
 
 
 }

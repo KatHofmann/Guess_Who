@@ -1,17 +1,8 @@
 public class Buttons extends Interactables {
 
-    String buttonType;
+    String buttonType; //Yes, No, Menu, Start, Continue, Exit, Confirm, Cancel
 
-    public Buttons(String type, String buttonType) {
-        super(type);
+    public Buttons(String buttonType) {
         this.buttonType = buttonType;
-    }
-
-    public void setButtonType(String buttonType) {
-        this.buttonType = buttonType;
-    }
-
-    public String getButtonType() {
-        return buttonType;
     }
 }
