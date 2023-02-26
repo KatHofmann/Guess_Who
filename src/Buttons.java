@@ -5,4 +5,6 @@ public class Buttons extends Interactables {
     public Buttons(String buttonType) {
         this.buttonType = buttonType;
     }
+
+
 }
