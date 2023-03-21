@@ -1,4 +1,4 @@
-public class Buttons extends Interactables {
+public class Buttons extends GamePlay {
 
     String buttonType; //Yes, No, Menu, Start, Continue, Exit, Confirm, Cancel
 
