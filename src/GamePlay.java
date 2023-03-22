@@ -27,47 +27,7 @@ int[] index = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         player1GameBoard = new ArrayList<>();
         player2GameBoard = new ArrayList<>();
 
-        for(int x = 0; x < 24; x++){
-            JPanel picture = new JPanel();
-            picture.addMouseListener(new MouseListener() {
-                                         @Override
-                                         public void mouseClicked(MouseEvent e) {
-                                             if (isFlipped = false){
-                                                 picture.setVisible(isFlipped);
-                                                 isFlipped = true;
 
-                                         }
-                                             else{
-                                                 picture.setVisible(!isFlipped);
-                                                 isFlipped = false;
-                                             }
-
-                                         @Override
-                                         public void mousePressed(MouseEvent e) {
-
-                                         }
-
-                                         @Override
-                                         public void mouseReleased(MouseEvent e) {
-
-                                         }
-
-                                         @Override
-                                         public void mouseEntered(MouseEvent e) {
-
-                                         }
-
-                                         @Override
-                                         public void mouseExited(MouseEvent e) {
-
-                                         }
-                                     }
-
-            );
-
-
-            }
-        }
     }
 
 }

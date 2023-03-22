@@ -1,11 +1,13 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Portraits extends GamePlay {
+public class Portraits extends JPanel implements MouseListener {
 String name;
 String pictureFile;
 Boolean isFlipped;
@@ -16,6 +18,7 @@ int index;
         this.pictureFile = pictureFile;
         this.isFlipped = false;
         this.index = 0;
+        super.addMouseListener(this);
     }
     public static void main(String[] arguments) throws IOException{
 
@@ -38,10 +41,34 @@ int index;
     }
 
 
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(isFlipped == false){
+            setVisible(false);
+            boolean isFlipped = true;
+        } else{
+            setVisible(true);
+            boolean isFlipped = false;
+        }
     }
 
+    @Override
+    public void mousePressed(MouseEvent e) {
 
+    }
 
+    @Override
+    public void mouseReleased(MouseEvent e) {
 
+    }
 
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
 }
