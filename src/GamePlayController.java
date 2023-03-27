@@ -1,12 +1,9 @@
 import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.ArrayList;
 
 
-public class GamePlay extends JPanel {
+public class GamePlayController extends JPanel {
 
-
+    gui.
 
         /*
         1. Game starts, portraits selected by both players

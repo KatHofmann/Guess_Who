@@ -20,12 +20,27 @@ int index;
         this.index = 0;
         super.addMouseListener(this);
     }
+    public JLabel makeImage(String file){
+        BufferedImage tempImage = null;
+        try{
+            tempImage = ImageIO.read(new File(file));
+
+        }catch(IOException e) {
+            throw new RuntimeException(e);
+        }
+        return (new JLabel(new ImageIcon((tempImage))));
+    }
+
+
+
+
+
     public static void main(String[] arguments) throws IOException{
 
         JPanel panel = new JPanel();
 
         BufferedImage image = ImageIO.read(
-                new File("C:\\Users\\kathr\\CMPSCI 221\\Guess Who\\Portrait images"));
+                new File("C:\\Users\\kathr\\CMPSCI 221\\Guess_Who\\src\\Portrait images"));
         JLabel label = new JLabel(new ImageIcon(image));
         panel.add(label);
 
