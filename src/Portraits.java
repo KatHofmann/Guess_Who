@@ -5,63 +5,70 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Portraits extends JPanel implements MouseListener {
-String name;
-String pictureFile;
-Boolean isFlipped;
-int index;
+    Boolean isFlipped;
+    JPanel picture;
+    private static MainGuessWho form;
 
-    public Portraits(String name, String pictureFile) {
-        this.name = name;
-        this.pictureFile = pictureFile;
+    public Portraits(MainGuessWho form, JPanel picture) {
+        this.form = form;
+        this.picture = picture;
         this.isFlipped = false;
-        this.index = 0;
         super.addMouseListener(this);
     }
-    public JLabel makeImage(String file){
-        BufferedImage tempImage = null;
+
+
+    public static void main(String[] args) throws Exception {
+        ArrayList<JPanel> portraits = new ArrayList<JPanel>();
+        portraits.add(form.get_001());
+        portraits.add(form.get_002());
+        portraits.add(form.get_003());
+        portraits.add(form.get_004());
+        portraits.add(form.get_005());
+        portraits.add(form.get_006());
+        portraits.add(form.get_007());
+        portraits.add(form.get_008());
+        portraits.add(form.get_009());
+        portraits.add(form.get_010());
+        portraits.add(form.get_011());
+        portraits.add(form.get_012());
+        portraits.add(form.get_013());
+        portraits.add(form.get_014());
+        portraits.add(form.get_015());
+        portraits.add(form.get_016());
+        portraits.add(form.get_017());
+        portraits.add(form.get_018());
+        portraits.add(form.get_019());
+        portraits.add(form.get_020());
+        portraits.add(form.get_021());
+        portraits.add(form.get_022());
+        portraits.add(form.get_023());
+        portraits.add(form.get_024());
+
+    }
+
+    public void imageImport(JPanel panel){
+        BufferedImage image;
         try{
-            tempImage = ImageIO.read(new File(file));
-
-        }catch(IOException e) {
-            throw new RuntimeException(e);
+            image = ImageIO.read(new File("/Images/Mii 1.jpg"));
+            panel.add(new ImageIcon(image));
+        } catch (IOException ex) {
+            // handle exception
         }
-        return (new JLabel(new ImageIcon((tempImage))));
     }
 
 
-
-
-
-    public static void main(String[] arguments) throws IOException{
-
-        JPanel panel = new JPanel();
-
-        BufferedImage image = ImageIO.read(
-                new File("C:\\Users\\kathr\\CMPSCI 221\\Guess_Who\\src\\Portrait images"));
-        JLabel label = new JLabel(new ImageIcon(image));
-        panel.add(label);
-
-        //main window
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame frame = new JFrame("JPanel Example");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //add the Jpanel to the main window
-        frame.add(panel);
-
-        frame.pack();
-    }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(isFlipped == false){
+        if (isFlipped == false) {
             setVisible(false);
             boolean isFlipped = true;
-        } else{
+        } else {
             setVisible(true);
             boolean isFlipped = false;
         }
