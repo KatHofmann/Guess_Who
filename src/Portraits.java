@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -49,7 +50,10 @@ public class Portraits extends JPanel implements MouseListener {
     public void imageImport(JPanel panel) {
         ImageIcon image;
         image = new ImageIcon("images/Mii 1.jpg");
-        JLabel label = new JLabel(image);
+
+        //label.setBounds(0,0,1,3);
+        ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
+        JLabel label = new JLabel(scaledImage);
         panel.add(label);
     }
 
@@ -85,13 +89,25 @@ public class Portraits extends JPanel implements MouseListener {
     }
 
     public static void main(String[] args) {
-        MainGuessWho main = new MainGuessWho();
-        Portraits pictures = new Portraits(main, new JPanel());
+        JFrame frame = new JFrame();
+        MainGuessWho form = new MainGuessWho();
+        JPanel content = form.getGameBoard();
+        frame.setContentPane(content);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+
+
+        //MainGuessWho main = new MainGuessWho();
+        Portraits pictures = new Portraits(form, new JPanel());
         pictures.initializePortraits();
         for (JPanel panel : pictures.portraits) {
             pictures.imageImport(panel);
         }
-        pictures.setVisible(true);
+        //pictures.setVisible(true);
+
+
     }
 }
 
