@@ -47,16 +47,6 @@ public class Portraits extends JPanel implements MouseListener {
         portraits.add(form.get_024());
     }
 
-    public void imageImport(JPanel panel) {
-        ImageIcon image;
-        image = new ImageIcon("images/Mii 1.jpg");
-
-        //label.setBounds(0,0,1,3);
-        ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
-        JLabel label = new JLabel(scaledImage);
-        panel.add(label);
-    }
-
     @Override
     public void mouseClicked(MouseEvent e) {
         if (isFlipped == false) {
@@ -97,17 +87,19 @@ public class Portraits extends JPanel implements MouseListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-
-
         //MainGuessWho main = new MainGuessWho();
         Portraits pictures = new Portraits(form, new JPanel());
         pictures.initializePortraits();
+
         for (JPanel panel : pictures.portraits) {
-            pictures.imageImport(panel);
+            int i = pictures.portraits.indexOf(panel);
+            ImageIcon image;
+            image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
+            ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
+            JLabel label = new JLabel(scaledImage);
+            panel.add(label);
         }
-        //pictures.setVisible(true);
-
-
     }
+        //pictures.setVisible(true);
 }
 
