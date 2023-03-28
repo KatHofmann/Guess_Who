@@ -1,28 +1,25 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class Portraits extends JPanel implements MouseListener {
     Boolean isFlipped;
     JPanel picture;
-    private static MainGuessWho form;
+    private MainGuessWho form;
+    private static ArrayList<JPanel> portraits;
 
     public Portraits(MainGuessWho form, JPanel picture) {
         this.form = form;
+        JPanel gameBoard = form.getGameBoard();
         this.picture = picture;
         this.isFlipped = false;
         super.addMouseListener(this);
+        initializePortraits();
     }
 
-
-    public static void main(String[] args) throws Exception {
-        ArrayList<JPanel> portraits = new ArrayList<JPanel>();
+    private void initializePortraits() {
+        portraits = new ArrayList<>();
         portraits.add(form.get_001());
         portraits.add(form.get_002());
         portraits.add(form.get_003());
@@ -47,30 +44,23 @@ public class Portraits extends JPanel implements MouseListener {
         portraits.add(form.get_022());
         portraits.add(form.get_023());
         portraits.add(form.get_024());
-
     }
 
-    public void imageImport(JPanel panel){
-        BufferedImage image;
-        try{
-            image = ImageIO.read(new File("/Images/Mii 1.jpg"));
-            panel.add(new ImageIcon(image));
-        } catch (IOException ex) {
-            // handle exception
-        }
+    public void imageImport(JPanel panel) {
+        ImageIcon image;
+        image = new ImageIcon("images/Mii 1.jpg");
+        JLabel label = new JLabel(image);
+        panel.add(label);
     }
-
-
-
 
     @Override
     public void mouseClicked(MouseEvent e) {
         if (isFlipped == false) {
             setVisible(false);
-            boolean isFlipped = true;
+            isFlipped = true;
         } else {
             setVisible(true);
-            boolean isFlipped = false;
+            isFlipped = false;
         }
     }
 
@@ -93,4 +83,15 @@ public class Portraits extends JPanel implements MouseListener {
     public void mouseExited(MouseEvent e) {
 
     }
+
+    public static void main(String[] args) {
+        MainGuessWho main = new MainGuessWho();
+        Portraits pictures = new Portraits(main, new JPanel());
+        pictures.initializePortraits();
+        for (JPanel panel : pictures.portraits) {
+            pictures.imageImport(panel);
+        }
+        pictures.setVisible(true);
+    }
 }
+

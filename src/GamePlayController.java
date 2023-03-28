@@ -3,8 +3,6 @@ import javax.swing.*;
 
 public class GamePlayController extends JPanel {
 
-    gui.
-
         /*
         1. Game starts, portraits selected by both players
         2. Player 1 submits a question to player 2

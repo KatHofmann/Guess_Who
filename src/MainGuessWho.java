@@ -33,6 +33,7 @@ public class MainGuessWho {
     private JPanel _022;
     private JPanel _023;
     private JPanel _024;
+    private JPanel gameBoard;
     private JRadioButton radioButton1;
 
     public JLabel getGuessWhoLabel() {
@@ -63,8 +64,105 @@ public class MainGuessWho {
         return radioButton1;
     }
 
+    public JPanel getGameBoard() {
+        return gameBoard;
+    }
 
+    public JPanel get_006() {
+        return _006;
+    }
 
+    public JPanel get_001() {
+        return _001;
+    }
+
+    public JPanel get_002() {
+        return _002;
+    }
+
+    public JPanel get_003() {
+        return _003;
+    }
+
+    public JPanel get_004() {
+        return _004;
+    }
+
+    public JPanel get_005() {
+        return _005;
+    }
+
+    public JPanel get_007() {
+        return _007;
+    }
+
+    public JPanel get_008() {
+        return _008;
+    }
+
+    public JPanel get_009() {
+        return _009;
+    }
+
+    public JPanel get_010() {
+        return _010;
+    }
+
+    public JPanel get_011() {
+        return _011;
+    }
+
+    public JPanel get_012() {
+        return _012;
+    }
+
+    public JPanel get_013() {
+        return _013;
+    }
+
+    public JPanel get_014() {
+        return _014;
+    }
+
+    public JPanel get_015() {
+        return _015;
+    }
+
+    public JPanel get_016() {
+        return _016;
+    }
+
+    public JPanel get_017() {
+        return _017;
+    }
+
+    public JPanel get_018() {
+        return _018;
+    }
+
+    public JPanel get_019() {
+        return _019;
+    }
+
+    public JPanel get_020() {
+        return _020;
+    }
+
+    public JPanel get_021() {
+        return _021;
+    }
+
+    public JPanel get_022() {
+        return _022;
+    }
+
+    public JPanel get_023() {
+        return _023;
+    }
+
+    public JPanel get_024() {
+        return _024;
+    }
 
     public MainGuessWho() {
 
