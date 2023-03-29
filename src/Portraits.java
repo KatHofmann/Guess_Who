@@ -1,22 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-public class Portraits extends JPanel implements MouseListener {
+public class Portraits extends JPanel{
     Boolean isFlipped;
-    JPanel picture;
+    JPanel panel;
+    ImageIcon picture;
     private MainGuessWho form;
     private static ArrayList<JPanel> portraits;
 
-    public Portraits(MainGuessWho form, JPanel picture) {
+    public Portraits(MainGuessWho form,JPanel panel) {
         this.form = form;
-        JPanel gameBoard = form.getGameBoard();
-        this.picture = picture;
+        this.panel = panel;
         this.isFlipped = false;
-        super.addMouseListener(this);
-        initializePortraits();
     }
 
     private void initializePortraits() {
@@ -45,9 +44,21 @@ public class Portraits extends JPanel implements MouseListener {
         portraits.add(form.get_022());
         portraits.add(form.get_023());
         portraits.add(form.get_024());
+        form.get_002().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                if(isVisible()){
+                    setVisible(false);
+                }else{
+                    setVisible(true);
+                }
+            }
+
+        });
     }
 
-    @Override
+    /*@Override
     public void mouseClicked(MouseEvent e) {
         if (isFlipped == false) {
             setVisible(false);
@@ -78,6 +89,8 @@ public class Portraits extends JPanel implements MouseListener {
 
     }
 
+     */
+
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         MainGuessWho form = new MainGuessWho();
@@ -87,7 +100,6 @@ public class Portraits extends JPanel implements MouseListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-        //MainGuessWho main = new MainGuessWho();
         Portraits pictures = new Portraits(form, new JPanel());
         pictures.initializePortraits();
 
@@ -96,10 +108,15 @@ public class Portraits extends JPanel implements MouseListener {
             ImageIcon image;
             image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
             ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
-            JLabel label = new JLabel(scaledImage);
+            JButton label = new JButton(scaledImage);
             panel.add(label);
+
+            label.addActionListener(e->{
+                //label.setVisible(!label.isVisible());
+                label.setBackground(Color.black);
+            });
         }
+
     }
-        //pictures.setVisible(true);
 }
 
