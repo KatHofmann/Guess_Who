@@ -55,8 +55,10 @@ public class Portraits extends JPanel{
                 if(label.getBackground()== Color.black) {
                     //label.setVisible(!label.isVisible());
                     label.setBackground(Color.white);
+                    panel.setBackground(Color.white);
                 }else{
                     label.setBackground(Color.black);
+                    panel.setBackground(Color.black);
                 }
             });
         }
