@@ -109,11 +109,16 @@ public class Portraits extends JPanel{
             image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
             ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
             JButton label = new JButton(scaledImage);
+            label.setBackground(Color.white);
             panel.add(label);
 
             label.addActionListener(e->{
-                //label.setVisible(!label.isVisible());
-                label.setBackground(Color.black);
+                if(label.getBackground()== Color.black) {
+                    //label.setVisible(!label.isVisible());
+                    label.setBackground(Color.white);
+                }else{
+                    label.setBackground(Color.black);
+                }
             });
         }
 
