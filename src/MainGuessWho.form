@@ -12,17 +12,6 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="2ac1e" class="javax.swing.JLabel" binding="GuessWhoLabel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-10441283"/>
-          <font name="Goudy Stout" size="48" style="1"/>
-          <foreground color="-16777216"/>
-          <text value="   ???   Guess Who   ???   "/>
-        </properties>
-      </component>
       <vspacer id="cbb75">
         <constraints>
           <grid row="3" column="3" row-span="4" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
@@ -46,7 +35,7 @@
           <grid id="c959d" binding="_001" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -56,7 +45,7 @@
           <grid id="bdd8" binding="_006" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -66,7 +55,7 @@
           <grid id="8145e" binding="_002" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -76,7 +65,7 @@
           <grid id="b0552" binding="_003" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -86,7 +75,7 @@
           <grid id="35f0" binding="_004" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -96,7 +85,7 @@
           <grid id="c0afc" binding="_005" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -106,7 +95,7 @@
           <grid id="1da55" binding="_010" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -116,7 +105,7 @@
           <grid id="ef6c5" binding="_022" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -126,7 +115,7 @@
           <grid id="720c0" binding="_016" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -136,7 +125,7 @@
           <grid id="f361d" binding="_011" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -146,7 +135,7 @@
           <grid id="cb7ab" binding="_012" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -156,7 +145,7 @@
           <grid id="75197" binding="_018" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -166,7 +155,7 @@
           <grid id="1237f" binding="_017" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -176,7 +165,7 @@
           <grid id="c4d80" binding="_024" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -186,7 +175,7 @@
           <grid id="b089a" binding="_023" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -196,7 +185,7 @@
           <grid id="f73e9" binding="_007" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -206,7 +195,7 @@
           <grid id="52e8d" binding="_008" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -216,7 +205,7 @@
           <grid id="965af" binding="_009" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -226,7 +215,7 @@
           <grid id="7264" binding="_019" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -236,7 +225,7 @@
           <grid id="9db09" binding="_020" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -246,7 +235,7 @@
           <grid id="990a7" binding="_021" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -256,7 +245,7 @@
           <grid id="9991d" binding="_013" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -266,7 +255,7 @@
           <grid id="69b1e" binding="_014" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -276,7 +265,7 @@
           <grid id="11026" binding="_015" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="175" height="150"/>
+                <preferred-size width="140" height="120"/>
               </grid>
             </constraints>
             <properties/>
@@ -287,7 +276,7 @@
       </grid>
       <component id="6079" class="javax.swing.JLabel" binding="QuestionBarLabel">
         <constraints>
-          <grid row="5" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12950155"/>
@@ -319,31 +308,41 @@
           <text value=""/>
         </properties>
       </component>
-      <grid id="3a062" binding="PersonPanel" layout-manager="FlowLayout" hgap="10" vgap="10" flow-align="1">
-        <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
-        </constraints>
-        <properties>
-          <background color="-14531950"/>
-        </properties>
-        <border type="none"/>
-        <children/>
-      </grid>
-      <component id="a453f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-16777216"/>
-          <enabled value="true"/>
-          <text value="Person's Name"/>
-        </properties>
-      </component>
       <hspacer id="3485">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
+      <grid id="3a062" binding="PersonPanel" layout-manager="FlowLayout" hgap="10" vgap="10" flow-align="1">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
+        </constraints>
+        <properties>
+          <background color="-14531950"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="a453f" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <background color="-16777216"/>
+              <enabled value="true"/>
+              <text value="Person's Name"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="2ac1e" class="javax.swing.JLabel" binding="GuessWhoLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-10441283"/>
+          <font name="Goudy Stout" size="48" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="   ???   Guess Who   ???   "/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

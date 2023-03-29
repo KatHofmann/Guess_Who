@@ -67,6 +67,7 @@ public class Portraits extends JPanel{
         Random rand = new Random();
         int i = rand.nextInt(24)+1;
         image = new ImageIcon("Portrait images/Mii "+i+".jpg");
+        //ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
         JButton label = new JButton(image);
         label.setBackground(Color.white);
         person.add(label);
@@ -77,6 +78,13 @@ public class Portraits extends JPanel{
         MainGuessWho form = new MainGuessWho();
         JPanel content = form.getGameBoard();
         frame.setContentPane(content);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = screenSize.width;
+        int height = screenSize.height;
+        frame.setSize(width,height);
+
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
@@ -85,6 +93,23 @@ public class Portraits extends JPanel{
         pictures.initializePortraits(pictures);
 
         pictures.selectPerson(form);
+
+        /*JFrame secondPanel = new JFrame();
+        secondPanel.setLayout(new FlowLayout());
+        secondPanel.setMinimumSize(new Dimension(500,500));
+        secondPanel.setMaximumSize(new Dimension(500,500));
+
+        JTextField display = new JTextField();
+        display.setText("Are you sure?");
+        secondPanel.add(display);
+        secondPanel.pack();
+        secondPanel.setVisible(true);
+
+        JFrame gameboard;
+        gameboard = frame;
+        gameboard.pack();
+        gameboard.setVisible(true);
+*/
     }
 }
 
