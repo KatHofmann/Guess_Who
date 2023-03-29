@@ -65,7 +65,7 @@ public class Portraits extends JPanel{
         JPanel person = form.getPersonPanel();
         ImageIcon image;
         Random rand = new Random();
-        int i = rand.nextInt(24)+1;
+        int i = rand.nextInt(24);
         image = new ImageIcon("Portrait images/Mii "+i+".jpg");
         //ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
         JButton label = new JButton(image);
