@@ -13,6 +13,7 @@ public class QuestionBar extends JPanel {
             int input = JOptionPane.showConfirmDialog(null, "Are you sure this is your question?");
             //0=yes 1=no 2=cancel
             System.out.println(input);
+
         });
     }
 

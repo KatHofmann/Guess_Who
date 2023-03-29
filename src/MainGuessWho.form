@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainGuessWho">
-  <grid id="27dc6" binding="gameBoard" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="gameBoard" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="1" left="10" bottom="1" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="1002" height="525"/>
+      <xy x="20" y="20" width="1002" height="221"/>
     </constraints>
     <properties>
       <background color="-10441283"/>
@@ -14,7 +14,7 @@
     <children>
       <vspacer id="cbb75">
         <constraints>
-          <grid row="3" column="3" row-span="4" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+          <grid row="2" column="4" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
             <preferred-size width="10" height="12"/>
             <maximum-size width="8" height="12"/>
           </grid>
@@ -23,7 +23,7 @@
       <grid id="45db8" binding="FacesPanel" layout-manager="GridLayoutManager" row-count="4" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="0" row-span="3" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="2" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-4501913"/>
@@ -276,7 +276,7 @@
       </grid>
       <component id="6079" class="javax.swing.JLabel" binding="QuestionBarLabel">
         <constraints>
-          <grid row="5" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12950155"/>
@@ -286,20 +286,9 @@
           <text value="Question: "/>
         </properties>
       </component>
-      <component id="3cb1b" class="javax.swing.JButton" binding="submitButton" default-binding="true">
-        <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="10" height="2"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-327681"/>
-          <text value="Submit"/>
-        </properties>
-      </component>
       <component id="47e2e" class="javax.swing.JTextField" binding="QuestionBarTextField">
         <constraints>
-          <grid row="5" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -308,39 +297,48 @@
           <text value=""/>
         </properties>
       </component>
-      <hspacer id="3485">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
       <grid id="3a062" binding="PersonPanel" layout-manager="FlowLayout" hgap="10" vgap="10" flow-align="1">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
+          <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="true">
+            <preferred-size width="140" height="120"/>
+          </grid>
         </constraints>
         <properties>
           <background color="-14531950"/>
         </properties>
         <border type="none"/>
-        <children>
-          <component id="a453f" class="javax.swing.JLabel">
-            <constraints/>
-            <properties>
-              <background color="-16777216"/>
-              <enabled value="true"/>
-              <text value="Person's Name"/>
-            </properties>
-          </component>
-        </children>
+        <children/>
       </grid>
       <component id="2ac1e" class="javax.swing.JLabel" binding="GuessWhoLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-10441283"/>
           <font name="Goudy Stout" size="48" style="1"/>
           <foreground color="-16777216"/>
           <text value="   ???   Guess Who   ???   "/>
+        </properties>
+      </component>
+      <component id="3cb1b" class="javax.swing.JButton" binding="submitButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="10" height="2"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-327681"/>
+          <text value="Submit"/>
+        </properties>
+      </component>
+      <component id="a453f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <enabled value="true"/>
+          <text value="Person's Name"/>
         </properties>
       </component>
     </children>
