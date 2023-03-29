@@ -4,6 +4,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Portraits extends JPanel{
     Boolean isFlipped;
@@ -15,10 +16,11 @@ public class Portraits extends JPanel{
     public Portraits(MainGuessWho form,JPanel panel) {
         this.form = form;
         this.panel = panel;
-        this.isFlipped = false;
+
+
     }
 
-    private void initializePortraits() {
+    private void initializePortraits(Portraits picture) {
         portraits = new ArrayList<>();
         portraits.add(form.get_001());
         portraits.add(form.get_002());
@@ -44,67 +46,9 @@ public class Portraits extends JPanel{
         portraits.add(form.get_022());
         portraits.add(form.get_023());
         portraits.add(form.get_024());
-        form.get_002().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                if(isVisible()){
-                    setVisible(false);
-                }else{
-                    setVisible(true);
-                }
-            }
 
-        });
-    }
-
-    /*@Override
-    public void mouseClicked(MouseEvent e) {
-        if (isFlipped == false) {
-            setVisible(false);
-            isFlipped = true;
-        } else {
-            setVisible(true);
-            isFlipped = false;
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
-
-     */
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        MainGuessWho form = new MainGuessWho();
-        JPanel content = form.getGameBoard();
-        frame.setContentPane(content);
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
-        Portraits pictures = new Portraits(form, new JPanel());
-        pictures.initializePortraits();
-
-        for (JPanel panel : pictures.portraits) {
-            int i = pictures.portraits.indexOf(panel);
+        for (JPanel panel : picture.portraits) {
+            int i = picture.portraits.indexOf(panel);
             ImageIcon image;
             image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
             ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
@@ -121,7 +65,31 @@ public class Portraits extends JPanel{
                 }
             });
         }
+    }
+    public void selectPerson(MainGuessWho form){
+        JPanel person = form.getPersonPanel();
+        ImageIcon image;
+        Random rand = new Random();
+        int i = rand.nextInt(24)+1;
+        image = new ImageIcon("Portrait images/Mii "+i+".jpg");
+        JButton label = new JButton(image);
+        label.setBackground(Color.white);
+        person.add(label);
+    }
 
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        MainGuessWho form = new MainGuessWho();
+        JPanel content = form.getGameBoard();
+        frame.setContentPane(content);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        Portraits pictures = new Portraits(form, new JPanel());
+        pictures.initializePortraits(pictures);
+
+        pictures.selectPerson(form);
     }
 }
 
