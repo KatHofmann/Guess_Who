@@ -1,4 +1,7 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class QuestionBar extends JPanel {
     String question;
@@ -6,8 +9,10 @@ public class QuestionBar extends JPanel {
     public QuestionBar(MainGuessWho form){
         this.form = form;
 
-        JTextField questiontxt = form.getQuestionBarTextField();
+        /*JTextField questiontxt = form.getQuestionBarTextField();
         questiontxt.getText();
+
+
 
         form.getSubmitButton().addActionListener(e->{
             int input = JOptionPane.showConfirmDialog(null, "Are you sure this is your question?");
@@ -15,6 +20,10 @@ public class QuestionBar extends JPanel {
             System.out.println(input);
 
         });
+
+         */
+
+
     }
 
 

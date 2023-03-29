@@ -1,6 +1,10 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.Scanner;
 
 public class MainGuessWho {
     private JLabel GuessWhoLabel;
@@ -173,5 +177,55 @@ public class MainGuessWho {
             }
         });
 
+        QuestionBarTextField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                getPersonPanel().setVisible(false);
+                getGameBoard().setVisible(false);
+                JFrame secondPanel = new JFrame();
+                secondPanel.setLayout(new FlowLayout());
+                secondPanel.setMinimumSize(new Dimension(500,500));
+                secondPanel.setMaximumSize(new Dimension(500,500));
+
+                JLabel display = new JLabel();
+                JLabel question = new JLabel();
+                display.setText("Question: ");
+                question.setText(getQuestionBarTextField().getText());
+                secondPanel.add(display);
+                secondPanel.add(question);
+
+                JButton yes = new JButton();
+                yes.setText("Yes");
+                yes.setBackground(Color.GREEN);
+                yes.addActionListener(a -> {
+                    secondPanel.setVisible(false);
+                    getPersonPanel().setVisible(true);
+                    getGameBoard().setVisible(true);
+
+                });
+
+                JButton no = new JButton();
+                no.setBackground(Color.RED);
+                no.setText("No");
+                no.addActionListener( a -> {
+                    secondPanel.setVisible(false);
+                    getPersonPanel().setVisible(true);
+                    getGameBoard().setVisible(true);
+
+
+                });
+
+
+
+
+                secondPanel.add(yes);
+                secondPanel.add(no);
+
+                getQuestionBarTextField().setText(null);
+                secondPanel.pack();
+                secondPanel.setVisible(true);
+
+            }
+        });
     }
 }

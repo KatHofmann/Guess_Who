@@ -3,10 +3,14 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+
+
+
 public class Portraits extends JPanel{
     JPanel panel;
     private MainGuessWho form;
     private static ArrayList<JPanel> portraits;
+    ArrayList<String> strings = new ArrayList<>();
 
     public Portraits(MainGuessWho form,JPanel panel) {
         this.form = form;
@@ -14,6 +18,7 @@ public class Portraits extends JPanel{
 
 
     }
+
 
     private void initializePortraits(Portraits picture) {
         portraits = new ArrayList<>();
@@ -43,7 +48,7 @@ public class Portraits extends JPanel{
         portraits.add(form.get_024());
 
         JLabel name = new JLabel();
-        ArrayList<String> strings = new ArrayList<>();
+
         strings.add("Jack");
         strings.add("Armando");
         strings.add("Bob");
@@ -55,18 +60,18 @@ public class Portraits extends JPanel{
         strings.add("Alex");
         strings.add("Karen");
         strings.add("Britney");
-        strings.add("Sallie");
-        strings.add("Kayleigh");
+        strings.add("Sally");
+        strings.add("Kayla");
         strings.add("Brianna");
         strings.add("Chelsea");
         strings.add("Mia");
         strings.add("Candice");
-        strings.add("Dominique");
-        strings.add("Aaron but spelled Erin");
+        strings.add("Nikki");
+        strings.add("Aaron");
         strings.add("Hanna");
         strings.add("Valerie");
         strings.add("Greg");
-        strings.add("Rosemarie");
+        strings.add("Marie");
         strings.add("Fred");
 
         for (JPanel panel : picture.portraits) {
@@ -76,9 +81,14 @@ public class Portraits extends JPanel{
             ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
             JButton label = new JButton(scaledImage);
             label.setBackground(Color.white);
-            panel.add(label);
+            name.setForeground(Color.black);
             name.setText(strings.get(i));
-            panel.add(name);
+            label.setText(name.getText());
+            label.setVerticalAlignment(SwingConstants.BOTTOM);
+            label.setHorizontalAlignment(SwingConstants.LEFT);
+
+            panel.add(label);
+
 
 
 
@@ -104,6 +114,13 @@ public class Portraits extends JPanel{
         JButton label = new JButton(image);
         label.setBackground(Color.white);
         person.add(label);
+
+        //Gives the Main Person a Name
+        JLabel mainName = new JLabel();
+        mainName.setText(strings.get(i));
+        mainName.setForeground(Color.white);
+        person.add(mainName);
+
     }
 
     public static void main(String[] args) {
