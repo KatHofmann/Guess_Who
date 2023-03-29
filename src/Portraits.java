@@ -42,6 +42,33 @@ public class Portraits extends JPanel{
         portraits.add(form.get_023());
         portraits.add(form.get_024());
 
+        JLabel name = new JLabel();
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("Jack");
+        strings.add("Armando");
+        strings.add("Bob");
+        strings.add("Thomas");
+        strings.add("CHAD");
+        strings.add("Terry");
+        strings.add("Susan");
+        strings.add("Katie");
+        strings.add("Alex");
+        strings.add("Karen");
+        strings.add("Britney");
+        strings.add("Sallie");
+        strings.add("Kayleigh");
+        strings.add("Brianna");
+        strings.add("Chelsea");
+        strings.add("Mia");
+        strings.add("Candice");
+        strings.add("Dominique");
+        strings.add("Aaron but spelled Erin");
+        strings.add("Hanna");
+        strings.add("Valerie");
+        strings.add("Greg");
+        strings.add("Rosemarie");
+        strings.add("Fred");
+
         for (JPanel panel : picture.portraits) {
             int i = picture.portraits.indexOf(panel);
             ImageIcon image;
@@ -50,6 +77,10 @@ public class Portraits extends JPanel{
             JButton label = new JButton(scaledImage);
             label.setBackground(Color.white);
             panel.add(label);
+            name.setText(strings.get(i));
+            panel.add(name);
+
+
 
             label.addActionListener(e->{
                 if(label.getBackground()== Color.black) {
