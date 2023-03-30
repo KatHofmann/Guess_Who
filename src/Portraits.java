@@ -1,3 +1,5 @@
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.Random;
 
 
 
-public class Portraits extends JPanel{
+public class Portraits extends JFrame{
     JPanel panel;
     private MainGuessWho form;
     private static ArrayList<JPanel> portraits;
@@ -16,8 +18,12 @@ public class Portraits extends JPanel{
         this.form = form;
         this.panel = panel;
 
-
     }
+
+
+
+
+
 
 
     private void initializePortraits(Portraits picture) {
@@ -53,7 +59,7 @@ public class Portraits extends JPanel{
         strings.add("Armando");
         strings.add("Bob");
         strings.add("Thomas");
-        strings.add("CHAD");
+        strings.add("Chad");
         strings.add("Terry");
         strings.add("Susan");
         strings.add("Katie");
@@ -80,12 +86,15 @@ public class Portraits extends JPanel{
             image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
             ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
             JButton label = new JButton(scaledImage);
+            label.setSize(panel.getSize());
             label.setBackground(Color.white);
             name.setForeground(Color.black);
             name.setText(strings.get(i));
             label.setText(name.getText());
-            label.setVerticalAlignment(SwingConstants.BOTTOM);
-            label.setHorizontalAlignment(SwingConstants.LEFT);
+            label.setHorizontalTextPosition(SwingConstants.CENTER);
+            label.setVerticalTextPosition(SwingConstants.BOTTOM);
+            //label.setVerticalAlignment(SwingConstants.CENTER);
+            //label.setHorizontalAlignment(SwingConstants.CENTER);
 
             panel.add(label);
 
@@ -116,10 +125,11 @@ public class Portraits extends JPanel{
         person.add(label);
 
         //Gives the Main Person a Name
-        JLabel mainName = new JLabel();
-        mainName.setText(strings.get(i));
-        mainName.setForeground(Color.white);
-        person.add(mainName);
+        label.setText(strings.get(i));
+        label.setForeground(Color.black);
+        label.setHorizontalTextPosition(SwingConstants.CENTER);
+        label.setVerticalTextPosition(SwingConstants.BOTTOM);
+        person.add(label);
 
     }
 
@@ -130,10 +140,10 @@ public class Portraits extends JPanel{
         frame.setContentPane(content);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = screenSize.width;
-        int height = screenSize.height;
-        frame.setSize(width,height);
+        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        //int width = screenSize.width;
+        //int height = screenSize.height;
+        //frame.setSize(width,height);
 
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -141,10 +151,26 @@ public class Portraits extends JPanel{
 
         Portraits pictures = new Portraits(form, new JPanel());
         pictures.initializePortraits(pictures);
-
         pictures.selectPerson(form);
 
-        /*JFrame secondPanel = new JFrame();
+
+        JFrame frame2 = new JFrame();
+        MainGuessWho form2 = new MainGuessWho();
+        JPanel content2 = form2.getGameBoard();
+        frame2.setContentPane(content2);
+        frame2.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        frame2.pack();
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setVisible(true);
+
+        Portraits pics = new Portraits(form2, new JPanel());
+        pics.initializePortraits(pics);
+        pics.selectPerson(form2);
+
+
+/*
+        JFrame secondPanel = new JFrame();
         secondPanel.setLayout(new FlowLayout());
         secondPanel.setMinimumSize(new Dimension(500,500));
         secondPanel.setMaximumSize(new Dimension(500,500));

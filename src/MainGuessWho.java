@@ -2,9 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.util.Scanner;
 
 public class MainGuessWho {
     private JLabel GuessWhoLabel;
@@ -12,7 +9,7 @@ public class MainGuessWho {
     private JPanel PersonPanel;
     private JLabel QuestionBarLabel;
     private JTextField QuestionBarTextField;
-    private JButton submitButton;
+    private JButton endTurnButton;
     private JPanel _006;
     private JPanel _001;
     private JPanel _002;
@@ -61,7 +58,7 @@ public class MainGuessWho {
     }
 
     public JButton getSubmitButton() {
-        return submitButton;
+        return endTurnButton;
     }
 
     public JRadioButton getRadioButton1() {
@@ -170,9 +167,10 @@ public class MainGuessWho {
 
     public MainGuessWho() {
 
-        submitButton.addActionListener(new ActionListener() {
+        endTurnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
 
             }
         });
@@ -216,8 +214,6 @@ public class MainGuessWho {
                 });
 
 
-
-
                 secondPanel.add(yes);
                 secondPanel.add(no);
 
@@ -227,5 +223,6 @@ public class MainGuessWho {
 
             }
         });
+
     }
 }

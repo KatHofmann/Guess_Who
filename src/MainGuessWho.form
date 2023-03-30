@@ -29,10 +29,13 @@
           <grid id="c959d" binding="_001" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-16777216"/>
             </properties>
             <border type="none"/>
@@ -41,20 +44,27 @@
           <grid id="bdd8" binding="_006" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="8145e" binding="_002" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -63,20 +73,27 @@
           <grid id="b0552" binding="_003" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="35f0" binding="_004" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -85,10 +102,13 @@
           <grid id="c0afc" binding="_005" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -97,40 +117,55 @@
           <grid id="1da55" binding="_010" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="ef6c5" binding="_022" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="720c0" binding="_016" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="f361d" binding="_011" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -139,10 +174,13 @@
           <grid id="cb7ab" binding="_012" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -151,70 +189,97 @@
           <grid id="75197" binding="_018" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="1237f" binding="_017" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="c4d80" binding="_024" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="b089a" binding="_023" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="f73e9" binding="_007" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="52e8d" binding="_008" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="965af" binding="_009" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
               <foreground color="-4501913"/>
             </properties>
             <border type="none"/>
@@ -223,60 +288,84 @@
           <grid id="7264" binding="_019" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="9db09" binding="_020" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="990a7" binding="_021" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="9991d" binding="_013" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="69b1e" binding="_014" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
           <grid id="11026" binding="_015" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="150"/>
+                <preferred-size width="150" height="200"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="false"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -328,7 +417,7 @@
           <text value="   ???   Guess Who   ???   "/>
         </properties>
       </component>
-      <component id="3cb1b" class="javax.swing.JButton" binding="submitButton" default-binding="true">
+      <component id="3cb1b" class="javax.swing.JButton" binding="endTurnButton">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="10" height="2"/>
