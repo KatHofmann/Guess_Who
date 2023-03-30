@@ -1,4 +1,4 @@
-public class Buttons extends GamePlayController {
+public class Buttons {
 
     String buttonType; //Yes, No, Menu, Start, Continue, Exit, Confirm, Cancel
 

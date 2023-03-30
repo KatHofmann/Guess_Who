@@ -84,7 +84,7 @@ public class Portraits extends MainGuessWho{
             int i = picture.portraits.indexOf(panel);
             ImageIcon image;
             image = new ImageIcon("Portrait images/Mii " + i + ".jpg");
-            ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
+            ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH));
             JButton label = new JButton(scaledImage);
             label.setSize(panel.getSize());
             label.setBackground(Color.white);
@@ -138,19 +138,25 @@ public class Portraits extends MainGuessWho{
     }
 
     public static void main(String[] args) {
+
+        MainGuessWho form = new MainGuessWho();
+        Portraits pictures = new Portraits(form, new JPanel());
+        pictures.initializePortraits(pictures);
+        pictures.selectPerson(form);
+
+        MainGuessWho form2 = new MainGuessWho();
+        Portraits pics = new Portraits(form2, new JPanel());
+        pics.initializePortraits(pics);
+        pics.selectPerson(form2);
+
+        GuessWhoFrame gwFrame = new GuessWhoFrame(1, form, form2);
+        gwFrame.setVisible(true);
+
+        /*
         JFrame frame = new JFrame();
         MainGuessWho form = new MainGuessWho();
-        //MainGuessWho form2 = new MainGuessWho();
         JPanel content = form.getGameBoard();
-        JPanel content2 = form.getGameBoard();
         frame.setContentPane(content);
-        frame.setContentPane(content2);
-        //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-        //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        //int width = screenSize.width;
-        //int height = screenSize.height;
-        //frame.setSize(width,height);
 
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -160,7 +166,7 @@ public class Portraits extends MainGuessWho{
         pictures.initializePortraits(pictures);
         pictures.selectPerson(form);
 
-/*
+
         JFrame frame2 = new JFrame();
         MainGuessWho form2 = new MainGuessWho();
         JPanel content2 = form2.getGameBoard();
@@ -175,10 +181,10 @@ public class Portraits extends MainGuessWho{
         pics.initializePortraits(pics);
         pics.selectPerson(form2);
 
-
-
-
 */
+
+
+
     }
 }
 

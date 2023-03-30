@@ -179,6 +179,7 @@ public class MainGuessWho {
         QuestionBarTextField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 getPersonPanel().setVisible(false);
                 getGameBoard().setVisible(false);
                 JFrame secondPanel = new JFrame();
@@ -200,6 +201,15 @@ public class MainGuessWho {
                     secondPanel.setVisible(false);
                     getPersonPanel().setVisible(true);
                     getGameBoard().setVisible(true);
+
+                    GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
+                    int me = fr1.whoami;
+                    if (me == 1) {
+                        fr1.whoami = 2;
+                        MainGuessWho m = fr1.player2;
+                        fr1.setContentPane(m.getGameBoard());
+                        fr1.revalidate();
+                    }
 
                 });
 
