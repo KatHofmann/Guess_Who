@@ -8,7 +8,7 @@ import java.util.Random;
 
 
 
-public class Portraits extends JFrame{
+public class Portraits extends MainGuessWho{
     JPanel panel;
     private MainGuessWho form;
     private static ArrayList<JPanel> portraits;
@@ -133,12 +133,19 @@ public class Portraits extends JFrame{
 
     }
 
+    public void NextTurn(MainGuessWho form, MainGuessWho form2){
+
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         MainGuessWho form = new MainGuessWho();
+        //MainGuessWho form2 = new MainGuessWho();
         JPanel content = form.getGameBoard();
+        JPanel content2 = form.getGameBoard();
         frame.setContentPane(content);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setContentPane(content2);
+        //frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         //Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         //int width = screenSize.width;
@@ -153,7 +160,7 @@ public class Portraits extends JFrame{
         pictures.initializePortraits(pictures);
         pictures.selectPerson(form);
 
-
+/*
         JFrame frame2 = new JFrame();
         MainGuessWho form2 = new MainGuessWho();
         JPanel content2 = form2.getGameBoard();
@@ -169,22 +176,8 @@ public class Portraits extends JFrame{
         pics.selectPerson(form2);
 
 
-/*
-        JFrame secondPanel = new JFrame();
-        secondPanel.setLayout(new FlowLayout());
-        secondPanel.setMinimumSize(new Dimension(500,500));
-        secondPanel.setMaximumSize(new Dimension(500,500));
 
-        JTextField display = new JTextField();
-        display.setText("Are you sure?");
-        secondPanel.add(display);
-        secondPanel.pack();
-        secondPanel.setVisible(true);
 
-        JFrame gameboard;
-        gameboard = frame;
-        gameboard.pack();
-        gameboard.setVisible(true);
 */
     }
 }
