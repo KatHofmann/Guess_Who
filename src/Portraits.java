@@ -102,7 +102,7 @@ public class Portraits extends MainGuessWho{
 
 
             label.addActionListener(e->{
-                if(label.getBackground()== Color.black) {
+                if(label.getBackground() == Color.black) {
                     //label.setVisible(!label.isVisible());
                     label.setBackground(Color.white);
                     panel.setBackground(Color.white);

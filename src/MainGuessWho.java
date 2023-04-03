@@ -207,10 +207,24 @@ public class MainGuessWho {
 
                 JLabel display = new JLabel();
                 JLabel question = new JLabel();
+                JPanel yourPortriat = new JPanel();
+
+                //Code attempting to add a picture of you next to the question for ease of answering and avoiding issue where player 2 can't see their portrait
+                //before answering the first question
+                GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
+                int me = fr1.whoami;
+/*
+                if(me == 1){
+                    yourPortriat = fr1.getPlayer1().getPersonPanel();
+                } else {
+                    yourPortriat = fr1.getPlayer2().getPersonPanel();
+                }
+*/
                 display.setText("Question: ");
                 question.setText(getQuestionBarTextField().getText());
                 secondPanel.add(display);
                 secondPanel.add(question);
+                secondPanel.add(yourPortriat);
 
                 JButton yes = new JButton();
                 yes.setText("Yes");
@@ -220,8 +234,6 @@ public class MainGuessWho {
                     getPersonPanel().setVisible(true);
                     getGameBoard().setVisible(true);
 
-                    GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
-                    int me = fr1.whoami;
                     if (me == 1) {
                         //code for question answer and lastQuestiontxt
                         fr1.getPlayer1().questionAnswer.setBackground(Color.GREEN);
@@ -252,8 +264,6 @@ public class MainGuessWho {
                     getPersonPanel().setVisible(true);
                     getGameBoard().setVisible(true);
 
-                    GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
-                    int me = fr1.whoami;
                     if (me == 1) {
                         fr1.getPlayer1().questionAnswer.setBackground(Color.RED);
                         fr1.getPlayer1().lastQuestiontxt.setText(question.getText());
