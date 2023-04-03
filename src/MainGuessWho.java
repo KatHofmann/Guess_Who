@@ -35,6 +35,8 @@ public class MainGuessWho {
     private JPanel _023;
     private JPanel _024;
     private JPanel gameBoard;
+    private JLabel lastQuestiontxt;
+    private JPanel questionAnswer;
     private JRadioButton radioButton1;
 
     public JLabel getGuessWhoLabel() {
@@ -165,6 +167,22 @@ public class MainGuessWho {
         return _024;
     }
 
+    public JLabel getLastQuestiontxt() {
+        return lastQuestiontxt;
+    }
+
+    public void setLastQuestiontxt(JLabel lastQuestiontxt) {
+        this.lastQuestiontxt = lastQuestiontxt;
+    }
+
+    public JPanel getQuestionAnswer() {
+        return questionAnswer;
+    }
+
+    public void setQuestionAnswer(JPanel questionAnswer) {
+        this.questionAnswer = questionAnswer;
+    }
+
     public MainGuessWho() {
 
 
@@ -209,6 +227,11 @@ public class MainGuessWho {
                         MainGuessWho m = fr1.player2;
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
+                    }else{
+                        fr1.whoami = 1;
+                        MainGuessWho m = fr1.player1;
+                        fr1.setContentPane(m.getGameBoard());
+                        fr1.revalidate();
                     }
 
                 });
@@ -221,7 +244,19 @@ public class MainGuessWho {
                     getPersonPanel().setVisible(true);
                     getGameBoard().setVisible(true);
 
-
+                    GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
+                    int me = fr1.whoami;
+                    if (me == 1) {
+                        fr1.whoami = 2;
+                        MainGuessWho m = fr1.player2;
+                        fr1.setContentPane(m.getGameBoard());
+                        fr1.revalidate();
+                    } else{
+                        fr1.whoami = 1;
+                        MainGuessWho m = fr1.player1;
+                        fr1.setContentPane(m.getGameBoard());
+                        fr1.revalidate();
+                    }
                 });
 
 
