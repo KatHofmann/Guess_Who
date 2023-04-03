@@ -223,11 +223,19 @@ public class MainGuessWho {
                     GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
                     int me = fr1.whoami;
                     if (me == 1) {
+                        //code for question answer and lastQuestiontxt
+                        fr1.getPlayer1().questionAnswer.setBackground(Color.GREEN);
+                        fr1.getPlayer1().lastQuestiontxt.setText(question.getText());
+
+                        //logic to switch to player 2
                         fr1.whoami = 2;
                         MainGuessWho m = fr1.player2;
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
                     }else{
+                        fr1.getPlayer2().questionAnswer.setBackground(Color.GREEN);
+                        fr1.getPlayer2().lastQuestiontxt.setText(question.getText());
+
                         fr1.whoami = 1;
                         MainGuessWho m = fr1.player1;
                         fr1.setContentPane(m.getGameBoard());
@@ -247,11 +255,17 @@ public class MainGuessWho {
                     GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
                     int me = fr1.whoami;
                     if (me == 1) {
+                        fr1.getPlayer1().questionAnswer.setBackground(Color.RED);
+                        fr1.getPlayer1().lastQuestiontxt.setText(question.getText());
+
                         fr1.whoami = 2;
                         MainGuessWho m = fr1.player2;
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
                     } else{
+                        fr1.getPlayer2().questionAnswer.setBackground(Color.RED);
+                        fr1.getPlayer2().lastQuestiontxt.setText(question.getText());
+
                         fr1.whoami = 1;
                         MainGuessWho m = fr1.player1;
                         fr1.setContentPane(m.getGameBoard());
