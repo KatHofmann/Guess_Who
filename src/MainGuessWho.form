@@ -418,7 +418,7 @@
           <text value="   ???   Guess Who   ???   "/>
         </properties>
       </component>
-      <component id="3cb1b" class="javax.swing.JButton" binding="endTurnButton">
+      <component id="3cb1b" class="javax.swing.JButton" binding="passButton">
         <constraints>
           <grid row="5" column="2" row-span="2" col-span="2" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="10" height="2"/>
@@ -426,7 +426,7 @@
         </constraints>
         <properties>
           <background color="-327681"/>
-          <text value="End Turn"/>
+          <text value="Pass"/>
         </properties>
       </component>
       <vspacer id="4632e">

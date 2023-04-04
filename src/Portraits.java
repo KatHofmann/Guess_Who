@@ -17,13 +17,7 @@ public class Portraits extends MainGuessWho{
     public Portraits(MainGuessWho form,JPanel panel) {
         this.form = form;
         this.panel = panel;
-
     }
-
-
-
-
-
 
 
     private void initializePortraits(Portraits picture) {
@@ -113,13 +107,12 @@ public class Portraits extends MainGuessWho{
             });
         }
     }
-    public void selectPerson(MainGuessWho form){
+    public JPanel selectPerson(MainGuessWho form){
         JPanel person = form.getPersonPanel();
         ImageIcon image;
         Random rand = new Random();
         int i = rand.nextInt(24);
         image = new ImageIcon("Portrait images/Mii "+i+".jpg");
-        //ImageIcon scaledImage = new ImageIcon(image.getImage().getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH));
         JButton label = new JButton(image);
         label.setBackground(Color.white);
         person.add(label);
@@ -131,10 +124,7 @@ public class Portraits extends MainGuessWho{
         label.setVerticalTextPosition(SwingConstants.BOTTOM);
         person.add(label);
 
-    }
-
-    public void NextTurn(MainGuessWho form, MainGuessWho form2){
-
+        return person;
     }
 
     public static void main(String[] args) {
@@ -149,39 +139,11 @@ public class Portraits extends MainGuessWho{
         pics.initializePortraits(pics);
         pics.selectPerson(form2);
 
+
         GuessWhoFrame gwFrame = new GuessWhoFrame(1, form, form2);
         gwFrame.setVisible(true);
 
-        /*
-        JFrame frame = new JFrame();
-        MainGuessWho form = new MainGuessWho();
-        JPanel content = form.getGameBoard();
-        frame.setContentPane(content);
 
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
-        Portraits pictures = new Portraits(form, new JPanel());
-        pictures.initializePortraits(pictures);
-        pictures.selectPerson(form);
-
-
-        JFrame frame2 = new JFrame();
-        MainGuessWho form2 = new MainGuessWho();
-        JPanel content2 = form2.getGameBoard();
-        frame2.setContentPane(content2);
-        frame2.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-        frame2.pack();
-        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame2.setVisible(true);
-
-        Portraits pics = new Portraits(form2, new JPanel());
-        pics.initializePortraits(pics);
-        pics.selectPerson(form2);
-
-*/
 
 
 

@@ -9,7 +9,7 @@ public class MainGuessWho {
     private JPanel PersonPanel;
     private JLabel QuestionBarLabel;
     private JTextField QuestionBarTextField;
-    private JButton endTurnButton;
+    private JButton passButton;
     private JPanel _006;
     private JPanel _001;
     private JPanel _002;
@@ -60,7 +60,7 @@ public class MainGuessWho {
     }
 
     public JButton getSubmitButton() {
-        return endTurnButton;
+        return passButton;
     }
 
     public JRadioButton getRadioButton1() {
@@ -186,7 +186,7 @@ public class MainGuessWho {
     public MainGuessWho() {
 
 
-        endTurnButton.addActionListener(new ActionListener() {
+        passButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -207,24 +207,41 @@ public class MainGuessWho {
 
                 JLabel display = new JLabel();
                 JLabel question = new JLabel();
-                JPanel yourPortriat = new JPanel();
+                JPanel yourPortrait = new JPanel();
+
+
+
+
+
+
 
                 //Code attempting to add a picture of you next to the question for ease of answering and avoiding issue where player 2 can't see their portrait
                 //before answering the first question
                 GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
                 int me = fr1.whoami;
-/*
-                if(me == 1){
-                    yourPortriat = fr1.getPlayer1().getPersonPanel();
-                } else {
-                    yourPortriat = fr1.getPlayer2().getPersonPanel();
-                }
-*/
+
+//                if (me == 1) {
+//
+//                    yourPortrait = fr1.getPlayer2().getPersonPanel();
+//                    yourPortrait.setMinimumSize(new Dimension(250,250));
+//                    yourPortrait.setMaximumSize(new Dimension(250,250));
+//                    yourPortrait.setPreferredSize(new Dimension(250,250));
+//
+//                } else {
+//
+//                    yourPortrait = fr1.getPlayer1().getPersonPanel();
+//                    yourPortrait.setMinimumSize(new Dimension(250,250));
+//                    yourPortrait.setMaximumSize(new Dimension(250,250));
+//                    yourPortrait.setPreferredSize(new Dimension(250,250));
+//
+//
+//
+//                }
+
                 display.setText("Question: ");
                 question.setText(getQuestionBarTextField().getText());
                 secondPanel.add(display);
                 secondPanel.add(question);
-                secondPanel.add(yourPortriat);
 
                 JButton yes = new JButton();
                 yes.setText("Yes");
@@ -244,7 +261,7 @@ public class MainGuessWho {
                         MainGuessWho m = fr1.player2;
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
-                    }else{
+                    } else {
                         fr1.getPlayer2().questionAnswer.setBackground(Color.GREEN);
                         fr1.getPlayer2().lastQuestiontxt.setText(question.getText());
 
@@ -253,7 +270,6 @@ public class MainGuessWho {
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
                     }
-
                 });
 
                 JButton no = new JButton();
@@ -272,7 +288,7 @@ public class MainGuessWho {
                         MainGuessWho m = fr1.player2;
                         fr1.setContentPane(m.getGameBoard());
                         fr1.revalidate();
-                    } else{
+                    } else {
                         fr1.getPlayer2().questionAnswer.setBackground(Color.RED);
                         fr1.getPlayer2().lastQuestiontxt.setText(question.getText());
 
@@ -283,16 +299,34 @@ public class MainGuessWho {
                     }
                 });
 
-
                 secondPanel.add(yes);
                 secondPanel.add(no);
+                secondPanel.add(yourPortrait);
 
                 getQuestionBarTextField().setText(null);
                 secondPanel.pack();
                 secondPanel.setVisible(true);
-
             }
         });
 
+        passButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
+                int me = fr1.whoami;
+                if (me == 1) {
+                    fr1.whoami = 2;
+                    MainGuessWho m = fr1.player2;
+                    fr1.setContentPane(m.getGameBoard());
+                    fr1.revalidate();
+                } else {
+                    fr1.whoami = 1;
+                    MainGuessWho m = fr1.player1;
+                    fr1.setContentPane(m.getGameBoard());
+                    fr1.revalidate();
+                }
+            };
+
+        });
     }
 }
