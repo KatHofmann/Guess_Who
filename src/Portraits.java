@@ -87,8 +87,6 @@ public class Portraits extends MainGuessWho{
             label.setText(name.getText());
             label.setHorizontalTextPosition(SwingConstants.CENTER);
             label.setVerticalTextPosition(SwingConstants.BOTTOM);
-            //label.setVerticalAlignment(SwingConstants.CENTER);
-            //label.setHorizontalAlignment(SwingConstants.CENTER);
 
             panel.add(label);
 

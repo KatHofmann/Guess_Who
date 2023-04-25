@@ -51,6 +51,7 @@ public class MainGuessWho {
         return PersonPanel;
     }
 
+    public JPanel setPersonPanel(JPanel panel) { return PersonPanel = panel;}
     public JLabel getQuestionBarLabel() {
         return QuestionBarLabel;
     }
@@ -209,6 +210,10 @@ public class MainGuessWho {
                 JLabel question = new JLabel();
                 JPanel yourPortrait = new JPanel();
 
+                yourPortrait.setMinimumSize(new Dimension(250,250));
+                yourPortrait.setMaximumSize(new Dimension(250,250));
+                yourPortrait.setPreferredSize(new Dimension(250,250));
+
 
 
 
@@ -220,23 +225,16 @@ public class MainGuessWho {
                 GuessWhoFrame fr1 = (GuessWhoFrame) SwingUtilities.getWindowAncestor(getGameBoard());
                 int me = fr1.whoami;
 
-//                if (me == 1) {
-//
-//                    yourPortrait = fr1.getPlayer2().getPersonPanel();
-//                    yourPortrait.setMinimumSize(new Dimension(250,250));
-//                    yourPortrait.setMaximumSize(new Dimension(250,250));
-//                    yourPortrait.setPreferredSize(new Dimension(250,250));
-//
-//                } else {
-//
-//                    yourPortrait = fr1.getPlayer1().getPersonPanel();
-//                    yourPortrait.setMinimumSize(new Dimension(250,250));
-//                    yourPortrait.setMaximumSize(new Dimension(250,250));
-//                    yourPortrait.setPreferredSize(new Dimension(250,250));
-//
-//
-//
-//                }
+                if (me == 1) {
+
+                    yourPortrait = fr1.getPlayer2().getPersonPanel();
+
+                } else {
+
+                    yourPortrait = fr1.getPlayer1().getPersonPanel();
+
+
+                }
 
                 display.setText("Question: ");
                 question.setText(getQuestionBarTextField().getText());
@@ -255,7 +253,7 @@ public class MainGuessWho {
                         //code for question answer and lastQuestiontxt
                         fr1.getPlayer1().questionAnswer.setBackground(Color.GREEN);
                         fr1.getPlayer1().lastQuestiontxt.setText(question.getText());
-
+                        //fr1.getPlayer1().setPersonPanel(yourPortrait);
                         //logic to switch to player 2
                         fr1.whoami = 2;
                         MainGuessWho m = fr1.player2;
